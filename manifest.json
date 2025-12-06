@@ -1,0 +1,20 @@
+{
+  "name": "HAI FEST 2025",
+  "short_name": "HAI FEST",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1B3F3A",
+  "theme_color": "#1B3F3A",
+  "icons": [
+    {
+      "src": "5.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "5.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
