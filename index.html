@@ -734,6 +734,23 @@
         body.is-landscape .deco-cross {
             display: none;
         }
+
+        /* Wrapper for Logo + QR */
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media (max-aspect-ratio: 1/1) {
+            .qr-section { order: 3; }
+        }
+        body.is-portrait .qr-section { order: 3; }
+
+        @media (min-aspect-ratio: 1/1) {
+            .qr-section { order: 1; margin: 0; flex-shrink: 0; }
+        }
+        body.is-landscape .qr-section { order: 1; margin: 0; flex-shrink: 0; }
     </style>
 </head>
 <body>
@@ -762,12 +779,6 @@
         window.addEventListener('orientationchange', updateOrientation);
     </script>
     <div class="poster-container">
-        <!-- Header Logos -->
-        <div class="header-logos">
-            <img src="3.png" alt="RSK Dharmais" class="logo-dharmais">
-            <img src="2.png" alt="HKN 61" class="logo-hkn">
-        </div>
-
         <!-- Main Card -->
         <div class="main-card">
             <!-- Decorative crosses -->
@@ -778,21 +789,19 @@
                 <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
             </div>
 
-            <!-- QR Code -->
-            <div class="qr-container">
-                <div class="qr-code">
-                    <img src="4.png" alt="QR Code Registrasi">
+            <div class="qr-section">
+                <img src="3.png" alt="RSK Dharmais" class="logo-dharmais" style="margin-bottom: 10px;">
+
+                <!-- QR Code -->
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <img src="4.png" alt="QR Code Registrasi">
+                    </div>
                 </div>
             </div>
 
             <!-- Content Wrapper for landscape layout -->
             <div class="content-wrapper">
-                <!-- HAI FEST Logo -->
-                <img src="5.png" alt="HAI FEST - Health Innovation Festival" class="haifest-logo">
-
-                <!-- Event Subtitle -->
-                <p class="event-subtitle">Hari Kesehatan Nasional ke-61</p>
-
                 <!-- Registration Title -->
                 <h1 class="registration-title">Scan untuk <span>Registrasi</span></h1>
 
@@ -808,18 +817,10 @@
 
                 <!-- Event Details -->
                 <div class="event-details">
-                    <p class="event-date">7-9 DESEMBER 2025</p>
-                    <p class="event-time">09.00 – 20.00 WIB</p>
-                    <p class="event-location">Balai Kartini, Jakarta</p>
+                    <p class="event-date">4 Februari 2026</p>
                 </div>
 
-                <!-- Theme Badge -->
-                <div class="theme-badge">
-                    <div style="flex: 1; text-align: center;">
-                        <p class="theme-text">GENERASI SEHAT, MASA DEPAN HEBAT, DENGAN</p>
-                    </div>
-                    <div class="satu-sehat-box">SATUSEHAT</div>
-                </div>
+                
             </div>
         </div>
 
